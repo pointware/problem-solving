@@ -5,6 +5,11 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MaximumSubarray {
+    /**
+     * kadane's algorithm...
+     * @param nums
+     * @return
+     */
     public static int maxSubArray(int[] nums) {
         int[] subSum = new int[nums.length];
 
