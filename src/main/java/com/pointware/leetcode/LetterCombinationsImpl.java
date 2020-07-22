@@ -1,4 +1,4 @@
-package com.pointware.leetcode.lettercombinations;
+package com.pointware.leetcode;
 
 import com.pointware.leetcode.problem.LetterCombinations;
 

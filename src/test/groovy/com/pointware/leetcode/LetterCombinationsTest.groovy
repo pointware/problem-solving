@@ -1,6 +1,6 @@
 package com.pointware.leetcode
 
-import com.pointware.leetcode.lettercombinations.LetterCombinationsImpl
+import com.pointware.Utils
 import spock.lang.Specification
 import spock.lang.Unroll
 
@@ -13,12 +13,10 @@ class LetterCombinationsTest extends Specification {
     @Unroll
     def "LetterCombinations"() {
         when:
-        def result = basicLetterCombinations.stream()
-                .map({ o -> o.letterCombinations(input) })
-                .collect()
+        def results = Utils.invokeTestMethods(basicLetterCombinations, { o -> o.letterCombinations(input) });
 
         then:
-        result.stream().allMatch({ o -> o == expect })
+        Utils.checkAllMatch(results, { o -> o == expect })
 
         where:
         input | expect
