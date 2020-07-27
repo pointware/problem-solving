@@ -22,7 +22,6 @@ public class HIndex2 {
             max = Math.max(max, compareValue);
             mid = (low + high) / 2;
         }
-        //연속되는 수...?
         return max;
     }
 }

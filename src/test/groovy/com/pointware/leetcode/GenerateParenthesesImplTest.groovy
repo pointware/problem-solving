@@ -3,7 +3,7 @@ package com.pointware.leetcode
 import spock.lang.Specification
 
 class GenerateParenthesesImplTest extends Specification {
-    def subject = new GenerateParenthesesImpl();
+    def subject = new GenerateParenthesesImpl.Recursive();
 
     def "GenerateParenthesis"() {
         when:
