@@ -2,9 +2,9 @@ package com.pointware.leetcode
 
 import spock.lang.Specification
 
-class LeetCode34SolutionTest extends Specification {
+class LeetCode34ImplTest extends Specification {
 
-    def subject = new LeetCode34Solution()
+    def subject = new LeetCode34Impl()
 
     def "BinarySearch"() {
         when:

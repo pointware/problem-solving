@@ -5,7 +5,7 @@ import com.pointware.leetcode.problem.LeetCode454;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LeetCode454Solution implements LeetCode454 {
+public class LeetCode454Impl implements LeetCode454 {
     //WARN: TIME LIMIT EXCEEDED
     private int recursion(int[][] subject,
                          int depth,

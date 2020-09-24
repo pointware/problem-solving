@@ -1,12 +1,13 @@
 package com.pointware.leetcode.entity
 
+import com.pointware.leetcode.util.ListNode
 import spock.lang.Specification
 
 class ListNodeTest extends Specification {
 
     def "fromArray"() {
         when:
-        def result = ListNode.fromArray([1,2] as int[])
+        def result = ListNode.fromArray([1, 2] as int[])
         then:
         result.toList() == [1,2] as List<Integer>
     }

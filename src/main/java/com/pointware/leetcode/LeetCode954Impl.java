@@ -5,7 +5,7 @@ import com.pointware.leetcode.problem.LeetCode954;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class LeetCode954Solution implements LeetCode954 {
+public class LeetCode954Impl implements LeetCode954 {
 
     private boolean checkCanDoubled(List<Integer> values){
         int range = values.size() / 2;

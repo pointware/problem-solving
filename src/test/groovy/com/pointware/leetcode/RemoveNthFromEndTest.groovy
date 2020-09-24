@@ -1,6 +1,6 @@
 package com.pointware.leetcode
 
-import com.pointware.leetcode.entity.ListNode
+import com.pointware.leetcode.util.ListNode
 import spock.lang.Specification
 
 class RemoveNthFromEndTest extends Specification {

@@ -2,7 +2,7 @@ package com.pointware.leetcode;
 
 import com.pointware.leetcode.problem.LeetCode215;
 
-public class LeetCode215Solution implements LeetCode215 {
+public class LeetCode215Impl implements LeetCode215 {
 
     private void swap(int[] a, int i1, int i2) {
         int temp = a[i1];

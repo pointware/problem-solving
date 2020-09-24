@@ -2,10 +2,10 @@ package com.pointware.leetcode
 
 import spock.lang.Specification
 
-class LeetCode55SolutionTest extends Specification {
+class LeetCode55ImplTest extends Specification {
     def "CanJump"() {
         setup:
-        def subject = new LeetCode55Solution();
+        def subject = new LeetCode55Impl();
 
         expect:
         subject.canJump(input as int[]) == expect

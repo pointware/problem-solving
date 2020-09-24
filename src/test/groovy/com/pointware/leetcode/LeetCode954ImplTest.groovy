@@ -2,10 +2,10 @@ package com.pointware.leetcode
 
 import spock.lang.Specification
 
-class LeetCode954SolutionTest extends Specification {
+class LeetCode954ImplTest extends Specification {
     def "CanReorderDoubled"() {
         expect:
-        new LeetCode954Solution().canReorderDoubled(input as int[]) == expect
+        new LeetCode954Impl().canReorderDoubled(input as int[]) == expect
 
         where:
         input               | expect

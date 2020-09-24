@@ -1,6 +1,6 @@
 package com.pointware.leetcode;
 
-import com.pointware.leetcode.entity.ListNode;
+import com.pointware.leetcode.util.ListNode;
 
 public class RemoveNthFromEnd implements com.pointware.leetcode.problem.RemoveNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {

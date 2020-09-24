@@ -3,7 +3,7 @@ package com.pointware.leetcode
 import spock.lang.Specification
 import spock.lang.Unroll
 
-class LeetCode240SolutionTest extends Specification {
+class LeetCode240ImplTest extends Specification {
     @Unroll
     def "SearchMatrix"() {
         setup:
@@ -15,7 +15,7 @@ class LeetCode240SolutionTest extends Specification {
                 [18, 21, 23, 26, 30]
         ] as int[][]
         expect:
-        new LeetCode240Solution().searchMatrix(input, input2) == expect
+        new LeetCode240Impl().searchMatrix(input, input2) == expect
 
         where:
         input2 | expect
@@ -27,7 +27,7 @@ class LeetCode240SolutionTest extends Specification {
     def "SearchMatrix_empty"() {
 
         expect:
-        new LeetCode240Solution().searchMatrix(input as int[][], input2) == expect
+        new LeetCode240Impl().searchMatrix(input as int[][], input2) == expect
 
         where:
         input           | input2 | expect

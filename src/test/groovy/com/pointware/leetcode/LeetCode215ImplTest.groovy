@@ -2,10 +2,10 @@ package com.pointware.leetcode
 
 import spock.lang.Specification
 
-class LeetCode215SolutionTest extends Specification {
+class LeetCode215ImplTest extends Specification {
     def "FindKthLargest"() {
         expect:
-        new LeetCode215Solution().findKthLargest(input1 as int[], input2) == expect
+        new LeetCode215Impl().findKthLargest(input1 as int[], input2) == expect
 
         where:
         input1 | input2 | expect

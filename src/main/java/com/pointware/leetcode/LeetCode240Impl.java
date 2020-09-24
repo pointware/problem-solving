@@ -5,7 +5,7 @@ import com.pointware.leetcode.problem.LeetCode240;
 /**
  *
  */
-public class LeetCode240Solution implements LeetCode240 {
+public class LeetCode240Impl implements LeetCode240 {
     @Override
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix.length == 0 || matrix[0].length == 0) {

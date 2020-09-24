@@ -3,7 +3,7 @@ package com.pointware.leetcode;
 import com.pointware.leetcode.problem.LeetCode34;
 
 
-public class LeetCode34Solution implements LeetCode34 {
+public class LeetCode34Impl implements LeetCode34 {
     public int binarySearch(int[] nums, int target, int type) {
         int result = -1;
         int left = 0;

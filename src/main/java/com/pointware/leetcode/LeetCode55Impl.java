@@ -1,6 +1,6 @@
 package com.pointware.leetcode;
 
-public class LeetCode55Solution implements com.pointware.leetcode.problem.LeetCode55 {
+public class LeetCode55Impl implements com.pointware.leetcode.problem.LeetCode55 {
     private boolean bruteForce(int[] nums, int present){
         if(present >= nums.length-1) return true;
         if(nums[present] == 0) return false;

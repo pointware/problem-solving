@@ -1,6 +1,6 @@
 package com.pointware.leetcode.problem;
 
-import com.pointware.leetcode.entity.ListNode;
+import com.pointware.leetcode.util.ListNode;
 
 /**
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
