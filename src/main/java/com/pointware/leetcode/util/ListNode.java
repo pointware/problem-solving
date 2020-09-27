@@ -20,7 +20,7 @@ public class ListNode {
     }
 
     public static ListNode fromArray(int[] val) {
-        if(val.length == 0) return null;
+        if (val.length == 0) return null;
         var head = new ListNode(val[0]);
         var node = head;
         for (int i = 1; i < val.length; i++) {
@@ -31,8 +31,8 @@ public class ListNode {
         return head;
     }
 
-    public List<Integer> toList(){
-        if(this.next == null){
+    public List<Integer> toList() {
+        if (this.next == null) {
             var list = new ArrayList<Integer>();
             list.add(val);
             return list;
@@ -41,5 +41,16 @@ public class ListNode {
             list.add(0, val);
             return list;
         }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof ListNode) {
+            final var node = ((ListNode) obj);
+            return this.val == node.val && (
+                    (this.next == null && node.next == null) ||
+                            this.next.equals(node.next));
+        }
+        return false;
     }
 }
