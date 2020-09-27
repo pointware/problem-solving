@@ -2,8 +2,6 @@ package com.pointware.leetcode;
 
 import com.pointware.leetcode.problem.LeetCode287;
 
-import java.util.Arrays;
-
 public class LeetCode287Impl implements LeetCode287 {
     @Override
     public int findDuplicate(int[] nums) {
