@@ -10,7 +10,7 @@ public class TreeNode {
     TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 
@@ -35,5 +35,16 @@ public class TreeNode {
                 create(values, index * 2 + 1),
                 create(values, index * 2 + 2)
         );
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof TreeNode) {
+            final var target = (TreeNode) obj;
+            return target.val == this.val &&
+                    (target.left == null && this.left == null || target.left.equals(this.left)) &&
+                    (target.right == null && this.right == null || target.right.equals(this.right));
+        }
+        return false;
     }
 }
