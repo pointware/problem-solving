@@ -6,6 +6,7 @@ class LeetCode279ImplTest extends Specification {
     def "NumSquares"() {
         expect:
         new LeetCode279Impl().numSquares(input) == output
+        new LeetCode279ImplDp().numSquares(input) == output
 
         where:
         input | output
