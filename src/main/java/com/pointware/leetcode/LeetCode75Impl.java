@@ -7,14 +7,16 @@ public class LeetCode75Impl implements LeetCode75 {
     public int[] sortColors(int[] nums) {
         if (nums.length == 0) return nums;
 
-        int two = nums.length;
-        int zero = -1;
-
-        for (int i = 0; i < nums.length && i < two; i++) {
-            if (nums[i] == 0) {
-                swap(nums, ++zero, i);
-            } else if (nums[i] == 2) {
-                swap(nums, --two, i);
+        int two = nums.length-1;
+        int zero = 0;
+        int i = 0;
+        while (i <= two) {
+            if (nums[i] == 2) {
+                swap(nums, two--, i);
+            } else if (nums[i] == 0) {
+                swap(nums, zero++, i++);
+            } else {
+                ++i;
             }
         }
 
