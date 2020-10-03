@@ -16,6 +16,7 @@ class LeetCode240ImplTest extends Specification {
         ] as int[][]
         expect:
         new LeetCode240Impl().searchMatrix(input, input2) == expect
+        new LeetCode240Impl2().searchMatrix(input, input2) == expect
 
         where:
         input2 | expect
@@ -28,6 +29,7 @@ class LeetCode240ImplTest extends Specification {
 
         expect:
         new LeetCode240Impl().searchMatrix(input as int[][], input2) == expect
+        new LeetCode240Impl2().searchMatrix(input as int[][], input2) == expect
 
         where:
         input           | input2 | expect
