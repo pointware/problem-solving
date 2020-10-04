@@ -5,8 +5,8 @@ import spock.lang.Specification
 class LeetCode5ImplTest extends Specification {
     def "LongestPalindrome"() {
         expect:
-//        new LeetCode5Impl().longestPalindrome(input) == output
-        new LeetCode5ImplDP().longestPalindrome(input) == output
+        new LeetCode5Impl().longestPalindrome(input) == output
+//        new LeetCode5ImplDP().longestPalindrome(input) == output
 
         where:
         input   | output
