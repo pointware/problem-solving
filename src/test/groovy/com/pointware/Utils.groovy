@@ -11,4 +11,10 @@ class Utils {
     static def checkAllMatch(Collection arr, Predicate func) {
         return arr.stream().allMatch(func)
     }
+
+    static def listAllMatch(Collection expect, Collection result){
+        expect.sort();
+        result.sort();
+        return expect == result;
+    }
 }
