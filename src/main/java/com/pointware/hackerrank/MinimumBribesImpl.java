@@ -9,13 +9,12 @@ public class MinimumBribesImpl implements MinimumBribes {
             if (q[i] - (i + 1) > 2) {
                 return -1;
             }
-        }
-        // O(n^2) TODO: fix..
-        for (int i = length - 1; i > 0; i--) {
-            for (int j = i; j >= 0; j--) {
+            // 최대 2칸 내에 존재하는 것들에 대해서 비교한다...
+            for (int j = Math.max(0, q[i] - 2); j < i; j++) {
                 if (q[j] > q[i]) count++;
             }
         }
+
         return count;
     }
 }
