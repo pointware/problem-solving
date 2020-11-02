@@ -51,4 +51,15 @@ class MediumBacktrackingProblemTest extends Specification {
                 []
         ]
     }
+
+    def "exist"() {
+        expect:
+        subject.exist(board as char[][], word) == output
+
+        where:
+        board | word | output
+        [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]] | "ABCCED" | true
+        [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]] | "SEE" | true
+        [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]] | "ABCB" | false
+    }
 }

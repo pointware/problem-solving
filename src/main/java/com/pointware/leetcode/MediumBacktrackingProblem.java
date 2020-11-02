@@ -50,9 +50,7 @@ public class MediumBacktrackingProblem {
     public List<List<Integer>> subsets(int[] nums) {
         var result = new ArrayList<List<Integer>>();
         result.add(Collections.emptyList());
-//        for (int i = 1; i <= nums.length; i++) {
         subsets(nums, 0, nums.length, new ArrayList<>(), result);
-//        }
         return result;
     }
 
@@ -66,5 +64,34 @@ public class MediumBacktrackingProblem {
             subsets(nums, i + 1, size - 1, list, result);
             list.remove(list.size() - 1);
         }
+    }
+
+    public boolean exist(char[][] board, String word) {
+        boolean[][] visits = new boolean[board.length][board[0].length];
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (exists(board, visits, i, j, 0, word)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean exists(char[][] board, boolean[][] visits,
+                          int row, int col,
+                          int index, String word) {
+        if (row < 0 || row > board.length - 1 ||
+                col < 0 || col > board[0].length - 1) return false;
+        if (visits[row][col] || board[row][col] != word.charAt(index)) return false;
+        if (index == word.length() - 1) return true;
+        visits[row][col] = true;
+        var result =
+                exists(board, visits, row - 1, col, index + 1, word) ||
+                        exists(board, visits, row + 1, col, index + 1, word) ||
+                        exists(board, visits, row, col - 1, index + 1, word) ||
+                        exists(board, visits, row, col + 1, index + 1, word);
+        visits[row][col] = false;
+        return result;
     }
 }
