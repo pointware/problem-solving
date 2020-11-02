@@ -15,4 +15,15 @@ class MediumDynamicProgrammingProblemTest extends Specification {
         [3, 2, 1, 0, 4]    | false
         [1, 0, 0, 0, 1, 1] | false
     }
+
+    def "uniquePaths"() {
+        expect:
+        subject.uniquePaths(m, n) == output
+
+        where:
+        m | n | output
+        3 | 7 | 28
+        7 | 3 | 28
+        3 | 3 | 6
+    }
 }
