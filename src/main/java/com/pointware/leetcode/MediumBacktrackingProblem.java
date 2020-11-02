@@ -1,6 +1,7 @@
 package com.pointware.leetcode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MediumBacktrackingProblem {
@@ -31,10 +32,7 @@ public class MediumBacktrackingProblem {
         return result;
     }
 
-    private void permute(int[] nums,
-                         List<Integer> list,
-                         boolean[] visits,
-                         List<List<Integer>> result) {
+    private void permute(int[] nums, List<Integer> list, boolean[] visits, List<List<Integer>> result) {
         if (list.size() == nums.length) {
             result.add(new ArrayList<>(list));
         }
@@ -46,6 +44,27 @@ public class MediumBacktrackingProblem {
             permute(nums, list, visits, result);
             list.remove(list.size() - 1);
             visits[i] = false;
+        }
+    }
+
+    public List<List<Integer>> subsets(int[] nums) {
+        var result = new ArrayList<List<Integer>>();
+        result.add(Collections.emptyList());
+//        for (int i = 1; i <= nums.length; i++) {
+        subsets(nums, 0, nums.length, new ArrayList<>(), result);
+//        }
+        return result;
+    }
+
+    private void subsets(int[] nums, int i, int size, List<Integer> list, ArrayList<List<Integer>> result) {
+        if (size == 0) {
+            return;
+        }
+        for (; i < nums.length; i++) {
+            list.add(nums[i]);
+            result.add(new ArrayList<>(list));
+            subsets(nums, i + 1, size - 1, list, result);
+            list.remove(list.size() - 1);
         }
     }
 }

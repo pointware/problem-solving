@@ -33,4 +33,22 @@ class MediumBacktrackingProblemTest extends Specification {
                 [3, 2, 1]
         ]
     }
+
+    def "subset"() {
+        expect:
+        new HashSet<>(subject.subsets(nums as int[])) == new HashSet<>(output);
+
+        where:
+        nums      | output
+        [1, 2, 3] | [
+                [3],
+                [1],
+                [2],
+                [1, 2, 3],
+                [1, 3],
+                [2, 3],
+                [1, 2],
+                []
+        ]
+    }
 }
